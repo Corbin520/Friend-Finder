@@ -1,5 +1,39 @@
 
 
+function differences() {
+
+    // for loop over the FriendOptions to get each value from the array of objects
+        for (var i = 0; i < friendOptions.length; i++) {
+
+            // console.log(friendOptions[i].scores);
+            console.log("-----NEW ARRAY-----")
+
+        // difference needs to start at 0
+        var diff = 0;
+
+            // now that we have each object from the array seperated, loop through the scores
+            for (var j = 0; j < friendOptions[i].scores.length; j++) {
+
+                // console.log(friendOptions[i].scores[j], friendOptions[j].scores[j])
+                // diff += Math.abs(friendOptions[i].scores[j] - friendOptions[i].scores[j]);
+               var friend1 =  friendOptions[i].scores[j];
+               var friend2 = friendOptions[j].scores[j]
+
+               if (friend1 == friend2) {
+                   console.log("true");
+               } else {
+                   console.log("false");
+               }
+                // console.log(Math.abs(friendOptions[i].scores.length))
+                    // Output: '10' for each index
+            }  
+        } 
+    }
+    
+    differences()
+
+    
+
 // 4. Your `apiRoutes.js` file should contain two routes:
 
 //    * A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
